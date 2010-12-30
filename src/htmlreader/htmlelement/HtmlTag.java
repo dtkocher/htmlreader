@@ -117,9 +117,9 @@ public class HtmlTag implements Cloneable{
 
 	@Override
 	public boolean equals(Object obj) {
-		if(!obj.getClass().isAssignableFrom(HtmlTag.class))
+		if(!(obj instanceof HtmlTag))
 			return false;
-		
+			
 		HtmlTag tag1 = this;
 		HtmlTag tag2 = (HtmlTag) obj;
 		
