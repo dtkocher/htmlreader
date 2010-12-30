@@ -1,30 +1,14 @@
 package htmlreader.reader;
 
 import htmlreader.htmlelement.HtmlPage;
-
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStreamReader;
+import java.net.URL;
 import javax.swing.text.html.HTMLEditorKit;
 import javax.swing.text.html.parser.ParserDelegator;
 
 public class HtmlReader {
 	
 	private HtmlPage page = new HtmlPage();
-	
-	public static void main(String args[])
-	{
-		try
-		{
-			HtmlReader reader = new HtmlReader();
-			reader.reader("C:\\t.html");
-			System.out.println(reader.getHtmlPage());			
-		}
-		catch(Exception ex)
-		{
-			System.out.println(ex);
-		}
-	}
 	
 	public HtmlReader(){}
 	
@@ -41,10 +25,8 @@ public class HtmlReader {
 		try
 		{
 			ParserDelegator parser = new ParserDelegator();
-			//URL u = new URL(pageUrl);
-			//InputStream in = u.openStream();
-		    FileInputStream in = new FileInputStream(new File(pageUrl));
-			r = new InputStreamReader(in);
+			URL u = new URL(pageUrl);
+		    r = new InputStreamReader(u.openStream());
 		    
 		    HTMLEditorKit.ParserCallback callback = new HtmlParser(page);
 		    parser.parse(r, callback, true);
