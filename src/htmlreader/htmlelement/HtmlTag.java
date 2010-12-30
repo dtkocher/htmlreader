@@ -103,6 +103,11 @@ public class HtmlTag implements Cloneable{
 	}
 	
 	@Override
+	/**
+	 * does a none-shallow clone of HtmlTag 
+	 * 
+	 * @return HtmlTag
+	 */
 	protected HtmlTag clone() {
 		try{
 			HtmlTag tag = (HtmlTag) super.clone();

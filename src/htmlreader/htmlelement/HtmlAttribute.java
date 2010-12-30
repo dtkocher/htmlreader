@@ -60,7 +60,7 @@ public class HtmlAttribute implements Cloneable {
 	
 	@Override
 	public boolean equals(Object obj) {
-		if(!obj.getClass().isAssignableFrom(HtmlAttribute.class))
+		if(!(obj instanceof HtmlAttribute))
 			return false;
 		
 		HtmlAttribute attr1 = this;

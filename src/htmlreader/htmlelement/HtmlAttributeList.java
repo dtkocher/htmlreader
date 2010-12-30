@@ -107,6 +107,11 @@ public class HtmlAttributeList extends ArrayList<HtmlAttribute> implements Clone
 	}
 	
 	@Override
+	/**
+	 * does a none-shallow clone of HtmlAttributeList 
+	 * 
+	 * @return HtmlAttributeList
+	 */
 	public HtmlAttributeList clone() {
 		HtmlAttributeList tmp = new HtmlAttributeList();
 		
@@ -120,7 +125,7 @@ public class HtmlAttributeList extends ArrayList<HtmlAttribute> implements Clone
 	
 	@Override
 	public boolean equals(Object o) {
-		if(!o.getClass().isAssignableFrom(HtmlAttributeList.class))
+		if(!(o instanceof HtmlAttribute))
 			return false;
 		
 		HtmlAttributeList list1 = this;
