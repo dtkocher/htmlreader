@@ -108,7 +108,7 @@ public class HtmlAttributeList extends ArrayList<HtmlAttribute> implements Clone
 	
 	@Override
 	/**
-	 * does a none-shallow clone of HtmlAttributeList 
+	 * does a deep clone of HtmlAttributeList 
 	 * 
 	 * @return HtmlAttributeList
 	 */

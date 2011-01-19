@@ -48,6 +48,12 @@ public class HtmlAttribute implements Cloneable {
 	}
 	
 	@Override
+	/**
+	 * returns a deep clone of HtmlAttribute
+	 * 
+	 * @param 
+	 * @return HtmlAttribute 
+	 */
 	protected HtmlAttribute clone() {
 		try{
 			return (HtmlAttribute) super.clone();

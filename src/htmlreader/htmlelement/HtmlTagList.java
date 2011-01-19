@@ -348,7 +348,7 @@ public class HtmlTagList extends ArrayList<HtmlTag> implements Cloneable {
 	
 	@Override
 	/**
-	 * does a none-shallow clone of HtmlTagList 
+	 * does a deep clone of HtmlTagList 
 	 * 
 	 * @return HtmlTagList
 	 */
