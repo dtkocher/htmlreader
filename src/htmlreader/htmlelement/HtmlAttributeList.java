@@ -9,101 +9,101 @@ public class HtmlAttributeList extends ArrayList<HtmlAttribute> implements Clone
 	public HtmlAttributeList(){}
 	
 	/**
-	 * returns the attribute that has this class name
+	 * returns if it has this class name
 	 * 
 	 * @param className
 	 * @return HtmlAttribute
 	 */
-	public HtmlAttribute getAttrByClass(String className)
+	public boolean getAttrByClass(String className)
 	{
 		return getAttrBy("class", className);
 	}
 	
 	/**
-	 * returns the attribute that contains this class name
+	 * returns if it contains this class name
 	 * 
 	 * @param className
 	 * @return HtmlAttribute
 	 */
-	public HtmlAttribute getAttrContainsClass(String className)
+	public boolean getAttrContainsClass(String className)
 	{
 		return getAttrContains("class", className);
 	}
 	
 	/**
-	 * returns the attribute that has this name
+	 * returns if it has this name
 	 * 
 	 * @param name
 	 * @return HtmlAttribute
 	 */
-	public HtmlAttribute getAttrByName(String name)
+	public boolean getAttrByName(String name)
 	{
 		return getAttrBy("name", name);
 	}
 	
 	/**
-	 * returns the attribute that contains this name
+	 * returns if it contains this name
 	 * 
 	 * @param name
 	 * @return HtmlAttribute
 	 */
-	public HtmlAttribute getAttrContainsName(String name)
+	public boolean getAttrContainsName(String name)
 	{
 		return getAttrContains("name", name);
 	}
 
 	/**
-	 * returns the attribute that has this id
+	 * returns if it has this id
 	 * 
 	 * @param id
 	 * @return HtmlAttribute
 	 */
-	public HtmlAttribute getAttrById(String id)
+	public boolean getAttrById(String id)
 	{
 		return getAttrBy("id", id);
 	}
 	
 	/**
-	 * returns the attribute that contains this id
+	 * returns if it contains this id
 	 * 
 	 * @param id
 	 * @return HtmlAttribute
 	 */
-	public HtmlAttribute getAttrContainsId(String id)
+	public boolean getAttrContainsId(String id)
 	{
 		return getAttrContains("id", id);
 	}
 
 	/**
-	 * returns the attribute that is of type=attType and value=attValue
+	 * returns if it is of type=attType and value=attValue
 	 * 
 	 * @param attType
 	 * @param attValue
 	 * @return HtmlAttribute
 	 */
-	public HtmlAttribute getAttrBy(String attType, String attValue)
+	public boolean getAttrBy(String attType, String attValue)
 	{
 		for(HtmlAttribute attr : this)
 			if(attr.getType().equalsIgnoreCase(attType))
 				if(attr.getValue().equalsIgnoreCase(attValue))
-					return attr;
-		return null;
+					return true;
+		return false;
 	}
 	
 	/**
-	 * returns the attribute that is of type=attType and contains value=attValue
+	 * returns if it is of type=attType and contains value=attValue
 	 * 
 	 * @param attType
 	 * @param attValue
 	 * @return HtmlAttribute
 	 */
-	public HtmlAttribute getAttrContains(String attType, String attValue)
+	public boolean getAttrContains(String attType, String attValue)
 	{
 		for(HtmlAttribute attr : this)
 			if(attr.getType().equalsIgnoreCase(attType))
 				if(attr.getValue().toLowerCase().contains(attValue.toLowerCase()))
-					return attr;
-		return null;
+					return true;
+		return false;
 	}
 	
 	@Override
