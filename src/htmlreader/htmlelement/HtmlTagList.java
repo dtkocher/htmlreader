@@ -19,7 +19,7 @@ public class HtmlTagList extends ArrayList<HtmlTag> implements Cloneable {
 		HtmlTagList tags = new HtmlTagList();
 		
 		for(HtmlTag tag : this)
-			if(tag.getAttrs().getAttrByClass(className)!=null)
+			if(tag.getAttrs().getAttrByClass(className))
 				tags.add(tag.clone());
 		
 		return tags;
@@ -39,7 +39,7 @@ public class HtmlTagList extends ArrayList<HtmlTag> implements Cloneable {
 		for(int i=0; i<this.size(); i++)
 		{
 			HtmlTag tag = this.get(i);
-			if(tag.getAttrs().getAttrByClass(className)!=null
+			if(tag.getAttrs().getAttrByClass(className)
 					&& (i+from)<this.size())
 				tags.add(this.get(i+from).clone());			
 		}
@@ -58,7 +58,7 @@ public class HtmlTagList extends ArrayList<HtmlTag> implements Cloneable {
 		HtmlTagList tags = new HtmlTagList();
 		
 		for(HtmlTag tag : this)
-			if(tag.getAttrs().getAttrContainsClass(className)!=null)
+			if(tag.getAttrs().getAttrContainsClass(className))
 				tags.add(tag.clone());
 		
 		return tags;
@@ -78,7 +78,7 @@ public class HtmlTagList extends ArrayList<HtmlTag> implements Cloneable {
 		for(int i=0; i<this.size(); i++)
 		{
 			HtmlTag tag = this.get(i);
-			if(tag.getAttrs().getAttrContainsClass(className)!=null
+			if(tag.getAttrs().getAttrContainsClass(className)
 					&& (i+from)<this.size())
 				tags.add(this.get(i+from).clone());			
 		}
@@ -97,7 +97,7 @@ public class HtmlTagList extends ArrayList<HtmlTag> implements Cloneable {
 		HtmlTagList tags = new HtmlTagList();
 		
 		for(HtmlTag tag : this)
-			if(tag.getAttrs().getAttrByName(name)!=null)
+			if(tag.getAttrs().getAttrByName(name))
 				tags.add(tag.clone());
 		
 		return tags;
@@ -117,7 +117,7 @@ public class HtmlTagList extends ArrayList<HtmlTag> implements Cloneable {
 		for(int i=0; i<this.size(); i++)
 		{
 			HtmlTag tag = this.get(i);
-			if(tag.getAttrs().getAttrByName(name)!=null
+			if(tag.getAttrs().getAttrByName(name)
 					&& (i+from)<this.size())
 				tags.add(this.get(i+from).clone());			
 		}
@@ -136,7 +136,7 @@ public class HtmlTagList extends ArrayList<HtmlTag> implements Cloneable {
 		HtmlTagList tags = new HtmlTagList();
 		
 		for(HtmlTag tag : this)
-			if(tag.getAttrs().getAttrContainsName(name)!=null)
+			if(tag.getAttrs().getAttrContainsName(name))
 				tags.add(tag.clone());
 		
 		return tags;
@@ -156,7 +156,7 @@ public class HtmlTagList extends ArrayList<HtmlTag> implements Cloneable {
 		for(int i=0; i<this.size(); i++)
 		{
 			HtmlTag tag = this.get(i);
-			if(tag.getAttrs().getAttrContainsName(name)!=null
+			if(tag.getAttrs().getAttrContainsName(name)
 					&& (i+from)<this.size())
 				tags.add(this.get(i+from).clone());			
 		}
@@ -175,7 +175,7 @@ public class HtmlTagList extends ArrayList<HtmlTag> implements Cloneable {
 		HtmlTagList tags = new HtmlTagList();
 		
 		for(HtmlTag tag : this)
-			if(tag.getAttrs().getAttrById(id)!=null)
+			if(tag.getAttrs().getAttrById(id))
 				tags.add(tag.clone());
 		
 		return tags;
@@ -195,7 +195,7 @@ public class HtmlTagList extends ArrayList<HtmlTag> implements Cloneable {
 		for(int i=0; i<this.size(); i++)
 		{
 			HtmlTag tag = this.get(i);
-			if(tag.getAttrs().getAttrById(id)!=null
+			if(tag.getAttrs().getAttrById(id)
 					&& (i+from)<this.size())
 				tags.add(this.get(i+from).clone());			
 		}
@@ -214,7 +214,7 @@ public class HtmlTagList extends ArrayList<HtmlTag> implements Cloneable {
 		HtmlTagList tags = new HtmlTagList();
 		
 		for(HtmlTag tag : this)
-			if(tag.getAttrs().getAttrContainsId(id)!=null)
+			if(tag.getAttrs().getAttrContainsId(id))
 				tags.add(tag.clone());
 		
 		return tags;
@@ -234,7 +234,7 @@ public class HtmlTagList extends ArrayList<HtmlTag> implements Cloneable {
 		for(int i=0; i<this.size(); i++)
 		{
 			HtmlTag tag = this.get(i);
-			if(tag.getAttrs().getAttrContainsId(id)!=null
+			if(tag.getAttrs().getAttrContainsId(id)
 					&& (i+from)<this.size())
 				tags.add(this.get(i+from).clone());			
 		}
@@ -254,7 +254,7 @@ public class HtmlTagList extends ArrayList<HtmlTag> implements Cloneable {
 		HtmlTagList tags = new HtmlTagList();
 		
 		for(HtmlTag tag : this)
-			if(tag.getAttrs().getAttrBy(attType, attValue)!=null)
+			if(tag.getAttrs().getAttrBy(attType, attValue))
 				tags.add(tag.clone());
 		
 		return tags;
@@ -275,7 +275,7 @@ public class HtmlTagList extends ArrayList<HtmlTag> implements Cloneable {
 		for(int i=0; i<this.size(); i++)
 		{
 			HtmlTag tag = this.get(i);
-			if(tag.getAttrs().getAttrBy(attType, attValue)!=null
+			if(tag.getAttrs().getAttrBy(attType, attValue)
 					&& (i+from)<this.size())
 				tags.add(this.get(i+from).clone());			
 		}
@@ -295,7 +295,7 @@ public class HtmlTagList extends ArrayList<HtmlTag> implements Cloneable {
 		HtmlTagList tags = new HtmlTagList();
 		
 		for(HtmlTag tag : this)
-			if(tag.getAttrs().getAttrContains(attType, attValue)!=null)
+			if(tag.getAttrs().getAttrContains(attType, attValue))
 				tags.add(tag.clone());
 		
 		return tags;
@@ -316,7 +316,7 @@ public class HtmlTagList extends ArrayList<HtmlTag> implements Cloneable {
 		for(int i=0; i<this.size(); i++)
 		{
 			HtmlTag tag = this.get(i);
-			if(tag.getAttrs().getAttrContains(attType, attValue)!=null
+			if(tag.getAttrs().getAttrContains(attType, attValue)
 					&& (i+from)<this.size())
 				tags.add(this.get(i+from).clone());			
 		}
