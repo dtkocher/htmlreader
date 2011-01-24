@@ -125,6 +125,9 @@ public class HtmlAttributeList extends ArrayList<HtmlAttribute> implements Clone
 	
 	@Override
 	public boolean equals(Object o) {
+		if(this==o)
+			return true;
+		
 		if(!(o instanceof HtmlAttribute))
 			return false;
 		
