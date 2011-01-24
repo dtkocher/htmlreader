@@ -72,8 +72,8 @@ public class HtmlAttribute implements Cloneable {
 		HtmlAttribute attr1 = this;
 		HtmlAttribute attr2 = (HtmlAttribute) obj;
 		
-		if(attr1.getType().equals(attr2.getType()) &&
-				attr1.getValue().equals(attr2.getValue()))
+		if(attr1.getType().equalsIgnoreCase(attr2.getType()) &&
+				attr1.getValue().equalsIgnoreCase(attr2.getValue()))
 			return true;
 		
 		return false;
