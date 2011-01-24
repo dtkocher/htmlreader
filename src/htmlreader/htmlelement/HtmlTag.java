@@ -128,8 +128,8 @@ public class HtmlTag implements Cloneable{
 		HtmlTag tag1 = this;
 		HtmlTag tag2 = (HtmlTag) obj;
 		
-		if(tag1.getTag().equals(tag2.getTag()) &&
-				tag1.getText().equals(tag2.getText()) &&
+		if(tag1.getTag().equalsIgnoreCase(tag2.getTag()) &&
+				tag1.getText().equalsIgnoreCase(tag2.getText()) &&
 				tag1.isStartTag()==tag2.isStartTag() &&
 				tag1.isSimpleTag()==tag2.isSimpleTag() &&
 				tag1.getAttrs().equals(tag2.getAttrs()))
